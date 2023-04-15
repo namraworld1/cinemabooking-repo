@@ -13,6 +13,7 @@ public class BookingController {
     List<Ticket> ticketList=new ArrayList<>();
     @PostMapping(path="/tickets")
     public Ticket addTicket(@RequestBody Ticket ticket){
+        System.out.println("Controller Called");
         ticketList.add(ticket);
         return ticket;
     }
