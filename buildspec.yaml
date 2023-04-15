@@ -3,12 +3,13 @@ version: 0.2
 phases:
   build:
     commands:
-      -echo Entered the build phase...
-      -mvn clean package
-    post_build:
-      commands:
-        -echo build Completed successfully...
+      - echo Entered the build phase...
+      - mvn clean package
+  post_build:
+    commands:
+      - echo Build completed successfully...
+
 artifacts:
   files:
-    -target/Cinema-service.jar
+    - target/Cinema-service.jar
   discard-paths: yes
